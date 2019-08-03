@@ -1,4 +1,31 @@
 [
-  {"id": 1, "brand": "Kailh", "type": "Box Jade"},
-  {"id": 2, "brand": "Cherry", "type": "Speed Silver"}
+  {
+    "id": 1,
+    "brand": "Kailh",
+    "model": "Box Jade",
+    "action": "Clicky",
+    "keycap_mount": "MX",
+    "stem_color": "Jade",
+    "housing_color": {
+      "top": "Clear",
+      "bottom": "White"
+    },
+    "spring_color": "Silver",
+    "switch_mount": "Plate",
+    "sense_method": "Metal leaf",
+    "led_style": "SMD",
+    "travel": {
+      "actuation": 1.8,
+      "bottom_out": 3.6
+    },
+    "force": {
+      "actuation": 50,
+      "peak": 75
+    },
+    "images": [
+      ""
+    ],
+    "datasheet": "https://benroe.github.io/switch-database/datasheets/kailh-box_jade-CPG1511F01S11.pdf",
+    "notes": ""
+  }
 ]
