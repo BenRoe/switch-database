@@ -1,0 +1,213 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "id",
+      "brand",
+      "model",
+      "action",
+      "keycap_mount",
+      "switch_mount"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "integer",
+        "exclusiveMinimum": 0,
+        "title": "Switch id",
+        "description": "The unique identifier for a switch (sequential number).",
+        "examples": [
+          3
+        ]
+      },
+      "brand": {
+        "$id": "#/items/properties/brand",
+        "type": "string",
+        "title": "Switch Brand",
+        "examples": [
+          "Cherry",
+          "Gateron"
+        ]
+      },
+      "model": {
+        "$id": "#/items/properties/model",
+        "type": "string",
+        "title": "Switch Model",
+        "examples": [
+          "Red",
+          "Silent Brown"
+        ]
+      },
+      "action": {
+        "$id": "#/items/properties/action",
+        "type": "string",
+        "title": "Switch action",
+        "enum": ["Linear", "Tactile", "Clicky"]
+      },
+      "keycap_mount": {
+        "$id": "#/items/properties/keycap_mount",
+        "type": "string",
+        "title": "Stem style",
+        "enum": ["MX","Alps"]
+      },
+      "stem_color": {
+        "$id": "#/items/properties/stem_color",
+        "type": "string",
+        "title": "Color of the stem",
+        "examples": [
+          "Red"
+        ]
+      },
+      "housing_color": {
+        "$id": "#/items/properties/housing_color",
+        "type": "object",
+        "title": "Switch housing color",
+        "required": [
+          "top",
+          "bottom"
+        ],
+        "properties": {
+          "top": {
+            "$id": "#/items/properties/housing_color/properties/top",
+            "type": "string",
+            "title": "Top housing color",
+            "examples": [
+              "Clear",
+              "Black"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "bottom": {
+            "$id": "#/items/properties/housing_color/properties/bottom",
+            "type": "string",
+            "title": "Bottom housing color",
+            "examples": [
+              "Clear",
+              "Black"
+            ]
+          }
+        }
+      },
+      "spring_color": {
+        "$id": "#/items/properties/spring_color",
+        "type": "string",
+        "title": "Spring color",
+        "examples": [
+          "Silver",
+          "Gold"
+        ]
+      },
+      "switch_mount": {
+        "$id": "#/items/properties/switch_mount",
+        "type": "string",
+        "title": "Switch mounting style",
+        "enum": ["PCB", "Plate"]
+      },
+      "sense_method": {
+        "$id": "#/items/properties/sense_method",
+        "type": "string",
+        "title": "Sense method",
+        "default": "Metal leaf",
+        "enum": ["Metal leaf"]
+      },
+      "led_style": {
+        "$id": "#/items/properties/led_style",
+        "type": "string",
+        "title": "Style of switch led",
+        "examples": [
+          "SMD"
+        ]
+      },
+      "travel": {
+        "$id": "#/items/properties/travel",
+        "type": "object",
+        "title": "Switch travel data",
+        "properties": {
+          "actuation": {
+            "$id": "#/items/properties/travel/properties/actuation",
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "title": "Actuation travel (mm)",
+            "description": "The actuation travel is the distance at which the switch registers a key press.",
+            "examples": [
+              20
+            ]
+          },
+          "bottom_out": {
+            "$id": "#/items/properties/travel/properties/bottom_out",
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "title": "Bottom out travel (mm)",
+            "description": "The total travel of a switch is the distance between the key's resting position, and its position when fully depressed, i.e. how far down you can press the key.",
+            "examples": [
+              30
+            ]
+          }
+        }
+      },
+      "force": {
+        "$id": "#/items/properties/force",
+        "type": "object",
+        "title": "Switch force Data",
+        "properties": {
+          "actuation": {
+            "$id": "#/items/properties/force/properties/actuation",
+            "type": "integer",
+            "exclusiveMaximum": 0,
+            "title": "Actuation force (gf)",
+            "description": "In gf (Gram-force), without tolerance. The force required to actuate the switch, i.e. to cause it to register a key press.",
+            "examples": [
+              50
+            ]
+          },
+          "peak": {
+            "$id": "#/items/properties/force/properties/peak",
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "title": "Peak force (gf)",
+            "description": "In gf (Gram-force), without tolerance. The highest force encountered in the travel of the switch, before the switch bottoms out.",
+            "examples": [
+              70
+            ]
+          }
+        }
+      },
+      "images": {
+        "$id": "#/items/properties/images",
+        "type": "array",
+        "title": "Image url",
+        "items": {
+          "$id": "#/items/properties/images/items",
+          "type": "string",
+          "format": "url",
+          "title": "Image url",
+          "examples": [
+            "https://keebfol.io/cherry-red-1.jpg"
+          ],
+          "pattern": "^(https?)://"
+        }
+      },
+      "datasheet": {
+        "$id": "#/items/properties/datasheet",
+        "type": "string",
+        "format": "url",
+        "title": "Datasheet url",
+        "examples": [
+          ""
+        ],
+        "pattern": "^(https?)://"
+      },
+      "notes": {
+        "$id": "#/items/properties/notes",
+        "type": "string",
+        "title": "Notes to this switch"
+      }
+    }
+  }
+}
