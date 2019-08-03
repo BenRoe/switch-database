@@ -26,6 +26,35 @@
       ""
     ],
     "datasheet": "https://benroe.github.io/switch-database/datasheets/kailh-box_jade-CPG1511F01S11.pdf",
-    "notes": ""
+    "notes": "IP56 water-proof and dirt-proof. Box Jade Switches features the same spring as the Box White,but with a thicker clickbar..  Box Jade is tactile clicky,spring force is same as box white,the clicky feeling is little resistant feeling"
+  },
+  {
+    "id": 2,
+    "brand": "Kailh",
+    "model": "Box Navy",
+    "action": "Clicky",
+    "keycap_mount": "MX",
+    "stem_color": "Navy",
+    "housing_color": {
+      "top": "Clear",
+      "bottom": "White"
+    },
+    "spring_color": "Silver",
+    "switch_mount": "Plate",
+    "sense_method": "Metal leaf",
+    "led_style": "SMD",
+    "travel": {
+      "actuation": 1.8,
+      "bottom_out": 3.6
+    },
+    "force": {
+      "actuation": 60,
+      "peak": 95
+    },
+    "images": [
+      ""
+    ],
+    "datasheet": "https://benroe.github.io/switch-database/datasheets/kailh-box_navi-CPG1511F01S09.pdf",
+    "notes": "BOX Navy features the same spring as BOX Pale Blue, but with a thicker clickbar. The Thick Clicks features a thicker clickbar. This increases the tactile feedback tremendously and creates a deeper and louder click."
   }
 ]
